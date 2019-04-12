@@ -1,5 +1,7 @@
 package org.otojunior.springbootwildfly;
 
+import java.time.LocalDateTime;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -42,7 +44,10 @@ public class SpringbootWildflyApplication extends SpringBootServletInitializer {
 		 */
 		@RequestMapping("/")
 		public String inicio() {
-			return "<h3>SpringbootWildflyApplication online!</h3>";
+			return "<p>"
+				+ "<h3>SpringbootWildflyApplication online!</h3>"
+				+ LocalDateTime.now().toString()
+				+ "</p>";
 		}
 	}
 }
